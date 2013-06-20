@@ -75,10 +75,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                                 }
                                
                                 outer.slideDown(settings.durationIn, function(){
+                                        // Enables click in the close selector even if autoclose option  was choosen
+                                        $(settings.manualCloseSelector).click(slideUp);
                                         if(settings.autoClose) {
                                                 setTimeout(slideUp, settings.autoClose)
-                                        } else {
-                                                $(settings.manualCloseSelector).click(slideUp)
                                         }
                                 });
                         }
